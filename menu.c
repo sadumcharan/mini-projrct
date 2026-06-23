@@ -2,18 +2,23 @@
 int main()
 {
     char op,ch;
+    int price=0;
     
-    printf("--------Welcome--------\n");
+    printf("-------- Welcome to Hotel--------\n");
     printf("Select what you want ->\n");
     printf("1.starter\n2.Main course\n3.desert\n4.Exit\n");
 
+ do
+ {
     scanf(" %c",&op);
+
+
 
     switch(op)
     {
         case '1':
         printf("you have choosed starter\n");
-        printf("1.Chicken Tikka\n2.Tandoori Chicken\n3.Dragon Chicken\n4.Chilli Chicken\n");
+        printf("1.Chicken Tikka - 180\n2.Tandoori Chicken - 200 \n3.Dragon Chicken - 210 \n4.Chilli Chicken - 230\n");
         scanf(" %c",&ch);
         switch(ch)
         
@@ -37,7 +42,7 @@ int main()
         
         case '2':
         printf("you have choosed Main course\n");
-        printf("1.Hyberabadi Chicken Biryani\n2.Mutton Biryani\n3.Butter Naan\n4.Butter Chicken\n");
+        printf("1.Hyberabadi Chicken Biryani - 250 \n2.Mutton Biryani - 320\n3.Butter Naan - 50\n4.Butter Chicken - 250\n");
         scanf(" %c", &ch);
     
         switch(ch)
@@ -61,7 +66,7 @@ int main()
 
         case '3':
         printf("you have choosed Desert\n");
-        printf("1.Gulab Jamun\n2.Rasmalai\n3.Kulfi\n4.Lava Cake\n");
+        printf("1.Gulab Jamun - 150 \n2.Rasmalai - 120 \n3.Kulfi -120 \n4.Lava Cake - 120\n");
         scanf(" %c", &ch);
         switch(ch)
         {
@@ -84,13 +89,14 @@ int main()
         break;
 
         case '4':
-                exit(0);
+                printf("Thank You! Visit Again");
+                break;
                
-
-        
-
         default:
         printf("Sorry,try next time\n");
-    }
 
+
+    }
+ }while(op != 4);
+ return 0;
 }
